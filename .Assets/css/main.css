@@ -1,0 +1,73 @@
+
+*{
+    overflow: hidden;
+}
+#modal{
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    width: 500px;
+    height: 250px;
+    top: 50%;
+    right: 50%;
+    margin-top: -175px;
+    margin-right: -250px;
+}
+
+#modal div{
+    display: inline-block;
+}
+#prev{
+    width: 140px;
+    height: 140px;
+    padding: 30px;
+    margin: 0px 0px 20px 10px;
+    border: solid 1px #000; 
+}
+#parti{
+    border-radius: 100%;
+    width: 78px;
+    height: 78px;;
+    border: solid 1px #000; 
+}
+#modal div input{
+    margin-top: 60px;
+    width: 300px;
+}
+#totu{
+    display: flex;
+}
+.particula{
+    height: 60px;
+    width: 60px;
+    border: solid 1px black;
+    border-radius: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#parti_menu{
+    min-height: 100px;
+    padding: 0;
+    
+}
+#defaultCanvas0{
+    box-shadow: inset 0px 0px 80px 10px rgba(255,255,255,1);
+}
+
+.Carg_imp{
+    border: none;
+    width: 30%;
+    height: 30px;
+    size: 25px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+
+}
+.duas{
+    visibility: hidden;
+}
+#interage h3{
+    margin-bottom: 0 !important;
+}
