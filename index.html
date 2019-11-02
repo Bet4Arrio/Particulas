@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href=".Assets/css/bulma-0.7.4/css/bulma.css">
+    <link rel="stylesheet" href=".Assets/css/main.css">
+    <script src=".Assets/js/p5/p5.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="modal" id="totu">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Tutorial - Simulador Força entre cargas pontuais</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div>
+                    <h1 class="title has-text-black has-text-centered">Adicionando cargas</h1>
+                    <br>
+                    <p> Para adicionar uma carga pontual, basta clicar na tela na posição que deseja que ela fique. Ao clicar na tela será aberto um modal, onde você colocara 
+                        a carga da mesma em <b>microcoulombs</b></p>
+                    <p> Quando mais de uma carga for adicionada ao ambiente, sera possivel ver os vetores Força resultanda em cada uma das cargas</p>
+                    <p>caso aperte F2 e F1 em seguida, para que as cargas sejam trados como objteos de massa despresivel carregados, e podera então ver o movimento gerado pela força de atração ou repulsão</p>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success" id="tuto-confirma">Confirmar</button>
+            </footer>
+        </div>
+    </div>
+    <div id="modal" class="box">
+            <div>
+                <input type="text" class="input is-info" name="carga" id="carga" placeholder="Valor da carga μC">
+                <div id="prev">
+                    <div id="parti"></div>
+                </div>
+            </div>
+            <div name="teste" class="buttons are-large" style="width: 100%;">
+                <a class="button is-success" style="width: 45%;" id="cria">
+                    Criar
+                </a>
+                <a class="button is-danger" style="width: 45%;" id="cancela">
+                    Cancelar
+                </a>
+            </div>
+    </div>
+
+    <div id="parti_menu" class="section columns">
+        <div class="column is-1">
+            <div class="field">
+                <div class="control">
+                    <label class="label">1º Particula</label>
+                    <div class="select is-info">
+                        <select id="carg1" onclick="carg1.set_ind(this)">
+                            <option value="null">Particula</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-danger" onclick="carg1.remove()"> remover</button>
+                </div>
+            </div>
+        </div>
+        <div class="column is-2 has-addons-centered">
+            <br>
+            <div class="particula is-center" id="particula1"></div>
+            <h3 class="title"><b>Carga: </b><input maxlength="6"  onkeyup="carg1.change_Carg()" class="Carg_imp" id="Carga_1"  type="text">μC</h3>
+            <h3 class="title"><b>Modulo da força total: </b><b id="forca1">0</b></h3>
+        </div>
+
+        <div class="column is-6  segund has-text-centered" id="interage" style="visibility: hidden;">
+            <h3 class="title has-text-info ">Mais sobre as Duas</h3>
+            <h3 class="title has-text-success" >Distancia <b id="int_dist"></b>(M)</h3>
+            <h3 class="title has-text-danger" style="display: none;" >Potencial Eletrico: <b id="Ep"></b>(N/C)</h3>
+            <h3 class="title has-text-danger">columb: <b id="columb" ></b>N</h3>
+            <h3 class="title has-text-primary">força:<b id="tipo"></b></h3>
+            <h3 class="title has-text-weight-semibold" id="setas"></h3>
+        </div>
+
+
+        <div class="column segund is-2" id="dados_2" style="visibility: hidden;">
+            <br>
+            <div class="particula" id="particula2"></div>
+            <h3 class="title"><b>Carga: </b><input maxlength="6"  onkeyup="carg2.change_Carg()"  class="Carg_imp" id="Carga_2" type="text">μC</h3>
+            <h3 class="title"><b>força total: </b><b id="forca2">0</b></h3>
+        </div>
+        <div  id="seleciona2" style="visibility: hidden;" class="column is-1">
+            <div class="field">
+                <div class="control">
+                    <label class="label">2º Particula</label>
+                    <div class="select is-info">
+                        <select id="carg2" onclick="carg2.set_ind(this)">
+                            <option value="null">Particula</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-danger" onclick="carg2.remove()"> remover</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src=".Assets/js/main.js"></script>
+    <script src=".Assets/js/tutorial.js"></script>
+
+</body>
+</html>

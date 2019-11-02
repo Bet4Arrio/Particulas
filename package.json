@@ -1,0 +1,14 @@
+{
+  "name": "particulas",
+  "version": "0.0.1",
+  "description": "Simulado de comportamento de particulas pela lei de columb em um ambiente 2d",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Emanuel",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.1"
+  }
+}
