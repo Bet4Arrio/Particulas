@@ -9,6 +9,6 @@
   "author": "Emanuel",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^5.0.1"
+    "electron": "^9.1.0"
   }
 }
